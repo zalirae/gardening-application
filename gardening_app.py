@@ -85,6 +85,14 @@ def main():
     actions = GardenActions(garden)
 
     garden.load_garden()
+
+function_map = {
+            "Show Garden": garden.display_plants,
+            "Water Garden": actions.water,
+            "Fertilize Soil": actions.fertilize,
+            "Plant Seeds": actions.plant_seeds,
+            "Save Garden": garden.save_garden,
+        }
   
 
 # Run program
