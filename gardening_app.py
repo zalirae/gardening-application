@@ -9,7 +9,6 @@ init (autoreset=True)
 #File to save Garden State
 GARDEN_FILE = "garden_data.json"
 
-
 '''Helper function to get yes/no'''
 def get_yes_no(prompt):
     while True:
@@ -19,10 +18,9 @@ def get_yes_no(prompt):
         else: print(Fore.RED + "Please enter 'yes' or 'no'. ")
 
 
-
 class Garden:
     '''Class representing the garden'''
-     def __init__(self, plants=None):
+    def __init__(self, plants=None):
         self.plants = plants if plants else ["tomatoes", "snow peas", "marigolds",
                                              "nasturtiums", "tulips"]
     def display_plants(self):
@@ -30,7 +28,7 @@ class Garden:
         for plant in self.plants:
             print(f"- {plant}")
 
-     def save_garden(self):
+    def save_garden(self):
         try:
             with open(GARDEN_FILE, 'w', encoding="utf-8") as f:
                 json.dump({"plants": self.plants}, f)
@@ -64,7 +62,7 @@ class GardenActions:
         else:
             print(Fore.YELLOW + "Your plants need fertilizer soon!")
 
-     def plant_seeds(self):
+    def plant_seeds(self):
         if get_yes_no("Plant seeds?") == "yes":
             seed_type = input("Plant 'orange tree' or 'pumpkin'? ").strip().lower()
             if seed_type in ["orange tree", "pumpkin"]:
@@ -86,7 +84,7 @@ def main():
 
     garden.load_garden()
 
-function_map = {
+    function_map = {
             "Show Garden": garden.display_plants,
             "Water Garden": actions.water,
             "Fertilize Soil": actions.fertilize,
