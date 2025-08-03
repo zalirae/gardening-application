@@ -64,6 +64,20 @@ class GardenActions:
         else:
             print(Fore.YELLOW + "Your plants need fertilizer soon!")
 
+     def plant_seeds(self):
+        if get_yes_no("Plant seeds?") == "yes":
+            seed_type = input("Plant 'orange tree' or 'pumpkin'? ").strip().lower()
+            if seed_type in ["orange tree", "pumpkin"]:
+                self.garden.plants.append(seed_type)
+                if get_yes_no("Water your seeds?") == "yes":
+                    print(Fore.GREEN + "Your seeds are sprouting!")
+                else:
+                    print(Fore.RED + "Your seeds need water!")
+            else:
+                print(Fore.RED + "Invalid seed type.")
+        else:
+            print(Fore.RED + "Maybe later then.")
+
 
 # Main Game Function
 def main():
