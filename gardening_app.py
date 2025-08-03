@@ -29,13 +29,22 @@ class Garden:
         print(Fore.GREEN + "\nYour garden has the following plants:")
         for plant in self.plants:
             print(f"- {plant}")
-            
+
      def save_garden(self):
         try:
             with open(GARDEN_FILE, 'w', encoding="utf-8") as f:
                 json.dump({"plants": self.plants}, f)
         except Exception as e:
             print(Fore.RED + f"Error saving your garden: {e}")
+
+    def load_garden(self):
+        try:
+            with open(GARDEN_FILE, 'r', encoding="utf-8") as f:
+                data = json.load(f)
+                self.plants = data.get("plants", [])
+                print(Fore.CYAN + "Garden loaded successfully!")
+        except FileNotFoundError:
+            print(Fore.YELLOW + "No saved garden found, starting a new garden.")
   
 
 class GardenActions:
