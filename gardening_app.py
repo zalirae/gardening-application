@@ -93,6 +93,19 @@ function_map = {
             "Plant Seeds": actions.plant_seeds,
             "Save Garden": garden.save_garden,
         }
+
+while True:
+        question = questionary.select(
+            "What would you like to do?",
+            choices=list(function_map.keys()) + ["Exit"]
+        ).ask()
+
+        if question == "Exit":
+            print(Fore.CYAN + "Thanks for gardening, goodbye!")
+            break
+
+        if question:
+            function_map[question]()
   
 
 # Run program
