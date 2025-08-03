@@ -81,6 +81,10 @@ class GardenActions:
 
 # Main Game Function
 def main():
+    garden = Garden()
+    actions = GardenActions(garden)
+
+    garden.load_garden()
   
 
 # Run program
