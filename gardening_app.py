@@ -58,6 +58,12 @@ class GardenActions:
         else:
             print(Fore.YELLOW + "The sun is out, your plants need water!")
 
+    def fertilize(self):
+        if get_yes_no("Fertilize the soil?") == "yes":
+            print(Fore.MAGENTA + "Your plants are ready to be picked!")
+        else:
+            print(Fore.YELLOW + "Your plants need fertilizer soon!")
+
 
 # Main Game Function
 def main():
