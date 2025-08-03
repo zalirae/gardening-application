@@ -110,3 +110,8 @@ if __name__ == "__main__":
     main()
 
 # Testing 
+def calculate_growth(days):
+    return days * 2
+
+def is_valid_seed(seed_type):
+    return seed_type in ["orange tree", "pumpkin"]
