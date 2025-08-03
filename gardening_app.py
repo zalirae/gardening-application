@@ -25,6 +25,17 @@ class Garden:
      def __init__(self, plants=None):
         self.plants = plants if plants else ["tomatoes", "snow peas", "marigolds",
                                              "nasturtiums", "tulips"]
+    def display_plants(self):
+        print(Fore.GREEN + "\nYour garden has the following plants:")
+        for plant in self.plants:
+            print(f"- {plant}")
+            
+     def save_garden(self):
+        try:
+            with open(GARDEN_FILE, 'w', encoding="utf-8") as f:
+                json.dump({"plants": self.plants}, f)
+        except Exception as e:
+            print(Fore.RED + f"Error saving your garden: {e}")
   
 
 class GardenActions:
