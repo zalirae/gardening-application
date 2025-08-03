@@ -49,6 +49,9 @@ class Garden:
 
 class GardenActions:
     '''Class representing the garden actions'''
+    def __init__(self, garden: Garden):
+        self.garden = garden
+
    
 
 # Main Game Function
