@@ -52,7 +52,12 @@ class GardenActions:
     def __init__(self, garden: Garden):
         self.garden = garden
 
-   
+    def water(self):
+        if get_yes_no("Water your garden?") == "yes":
+            print(Fore.BLUE + "Your plants are growing!")
+        else:
+            print(Fore.YELLOW + "The sun is out, your plants need water!")
+
 
 # Main Game Function
 def main():
