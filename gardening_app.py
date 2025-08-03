@@ -92,7 +92,7 @@ def main():
             "Save Garden": garden.save_garden,
         }
 
-while True:
+    while True:
         question = questionary.select(
             "What would you like to do?",
             choices=list(function_map.keys()) + ["Exit"]
@@ -104,7 +104,6 @@ while True:
 
         if question:
             function_map[question]()
-  
 
 # Run program
 if __name__ == "__main__":
