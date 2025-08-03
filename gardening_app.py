@@ -12,7 +12,11 @@ GARDEN_FILE = "garden_data.json"
 
 '''Helper function to get yes/no'''
 def get_yes_no(prompt):
-   
+    while True:
+        response = input(prompt + " (yes/no): ").strip().lower()
+        if response in ["yes", "no"]:
+            return response
+        else: print(Fore.RED + "Please enter 'yes' or 'no'. ")
 
 
 
