@@ -22,6 +22,9 @@ def get_yes_no(prompt):
 
 class Garden:
     '''Class representing the garden'''
+     def __init__(self, plants=None):
+        self.plants = plants if plants else ["tomatoes", "snow peas", "marigolds",
+                                             "nasturtiums", "tulips"]
   
 
 class GardenActions:
