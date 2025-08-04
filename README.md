@@ -81,7 +81,9 @@ Navigate using arrow keys to 'exit' and select with return.
 
 ## TESTING
 Upon further learning and continued tweaking and updating of the app, I have added and run multiple tests. Such as:
--> def test_is_valid_seed():
+
+```
+def test_is_valid_seed():
     assert is_valid_seed("orange tree")
     assert is_valid_seed("pumpkin")
     assert not is_valid_seed("apple")
@@ -99,6 +101,9 @@ def test_garden_plant_addition():
     g.plants.append("pumpkin")
     assert "pumpkin" in g.plants
     print("test_garden_plant_addition passed.") 
+````
+### Hurdles and growth
+In initial creating of this app I wasnt in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. 
 
 
 ## PACKAGES 
