@@ -56,23 +56,35 @@ Navigate using arrow keys to 'exit' and select with return!
 
 Download the zip file, take note of the location it saves to, by default this is the downloads file. 
 Open a new terminal and navigate to the downloads folder: 
+```
 -> cd downloads
+```
 Once in the downloads folder, navigate to the garden app folder: 
+```
 -> cd 16307_Bartholomew_Zali_DEV1001_Assessment_02
+```
 
 You will need python installed to run this app, check you have it: 
+```
 -> python --version 
+```
 If it is not installed, you will need to install it to continue. 
 
 Next you will install the necessary libraries: 
+```
 pip3 install colorama
 pip3 install questionary
+```
 
 Once those have successfully installed, you can run the app: 
 for python versions below 3.13 run: 
+```
 -> python gardening_app.py
+```
 for python versions 3.13 and above run: 
+```
 -> python3 gardening_app.py
+```
 
 Continue to follow prompts with yes/no or make selections using the arrow keys to play and complete your game!
 
@@ -102,8 +114,9 @@ def test_garden_plant_addition():
     assert "pumpkin" in g.plants
     print("test_garden_plant_addition passed.") 
 ````
+
 ### Hurdles and growth
-In initial creating of this app I wasnt in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. 
+In initial creating of this app I wasnt in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. I have learnt the importance of descriptive and meaningful commits, over the course of the projects I'm working on. 
 
 
 ## PACKAGES 

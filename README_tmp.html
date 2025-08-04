@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>README.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///Users/zalibartholomew/Desktop/2025-dwd/16307_Bartholomew_Zali_DEV1001_Assessment_02/R%3A%5C2.Travail%5C1.Enseignement%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css"><link rel="stylesheet" href="file:///Users/zalibartholomew/Desktop/2025-dwd/16307_Bartholomew_Zali_DEV1001_Assessment_02/D%3A%5Crdaros%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="gardening-app">GARDENING APP</h1>
+<p><strong>Created by Zali Rae</strong> 2025<br>
+This is a terminal based application where you create and maintain a garden, with a selection of different plants! You can water, fertilize, plant seeds and ultimately even save your garden to a json file.</p>
+<p>This app is a text based, simple and interactive game, where the user has a certain level of control over the garden - promoting imagination of what that space would look like. It was really enjoyable to imagine and construct the different functions, figuring out how they all worked and became interactive. I used a virtual environment to install necessary packages and libraries: <em>Colorama</em> (to colourise and diversify text) and <em>Questionary</em> (for nice looking command line interfaces, in this case using the arrow keys navigate up and down and select which action you would like to take).</p>
+<h2 id="set-up-and-help">SET UP and HELP</h2>
+<p>This app runs on Python3! As well as uses a couple of libraries you will have to install to help everything run smoothly and to get the most out of the game.<br>
+Here is some documentation on installing Python3 if you haven't already got it:</p>
+<p><a href="https://realpython.com/installing-python/">Installing Python</a></p>
+<p>As well as some documentation on used libraries, Colorama &amp; Questionary:</p>
+<p><a href="https://pypi.org/project/colorama/">COLORAMA install &amp; documentation</a><br>
+<a href="https://pypi.org/project/questionary/">QUESTIONARY install &amp; documentation</a></p>
+<p>And now, some instructions on setting up your Gardening App on your own device...</p>
+<h3 id="mac-os">Mac OS</h3>
+<p>Download the zip file, take note of the location it saves to, by default this is the downloads file.<br>
+Open a new terminal and navigate to the downloads folder:<br>
+-&gt; cd downloads<br>
+Once in the downloads folder, navigate to the garden app folder:<br>
+-&gt; cd 16307_Bartholomew_Zali_DEV1001_Assessment_02</p>
+<p>You will need python installed to run this app, check you have it:<br>
+-&gt; python --version<br>
+If it is not installed, you will need to install it to continue.</p>
+<p>Next you will install the necessary libraries:<br>
+pip3 install colorama<br>
+pip3 install questionary</p>
+<p>Once those have successfully installed, you can run the app:<br>
+<em>for python versions below 3.13 run:</em><br>
+-&gt; python gardening_app.py<br>
+<em>for python versions 3.13 and above run:</em><br>
+-&gt; python3 gardening_app.py</p>
+<p>Continue to follow prompts with yes/no or make selections using the arrow keys to play and complete your game!</p>
+<p><em>To exit game:</em><br>
+Navigate using arrow keys to 'exit' and select with return!</p>
+<h3 id="windows-pc">Windows PC</h3>
+<p>Download the zip file, take note of the location it saves to, by default this is the downloads file.<br>
+Open a new terminal and navigate to the downloads folder:</p>
+<pre class="hljs"><code><div>-&gt; cd downloads
+</div></code></pre>
+<p>Once in the downloads folder, navigate to the garden app folder:</p>
+<pre class="hljs"><code><div>-&gt; cd 16307_Bartholomew_Zali_DEV1001_Assessment_02
+</div></code></pre>
+<p>You will need python installed to run this app, check you have it:</p>
+<pre class="hljs"><code><div>-&gt; python --version 
+</div></code></pre>
+<p>If it is not installed, you will need to install it to continue.</p>
+<p>Next you will install the necessary libraries:</p>
+<pre class="hljs"><code><div>pip3 install colorama
+pip3 install questionary
+</div></code></pre>
+<p>Once those have successfully installed, you can run the app:<br>
+for python versions below 3.13 run:</p>
+<pre class="hljs"><code><div>-&gt; python gardening_app.py
+</div></code></pre>
+<p>for python versions 3.13 and above run:</p>
+<pre class="hljs"><code><div>-&gt; python3 gardening_app.py
+</div></code></pre>
+<p>Continue to follow prompts with yes/no or make selections using the arrow keys to play and complete your game!</p>
+<p><em>To exit game:</em><br>
+Navigate using arrow keys to 'exit' and select with return.</p>
+<h2 id="testing">TESTING</h2>
+<p>Upon further learning and continued tweaking and updating of the app, I have added and run multiple tests. Such as:</p>
+<pre class="hljs"><code><div>def test_is_valid_seed():
+    assert is_valid_seed(&quot;orange tree&quot;)
+    assert is_valid_seed(&quot;pumpkin&quot;)
+    assert not is_valid_seed(&quot;apple&quot;)
+    assert not is_valid_seed(&quot;&quot;)
+    print(&quot;test_is_valid_seed passed.&quot;)
+
+def test_garden_initial_plants():
+    g = Garden()
+    assert &quot;tomatoes&quot; in g.plants
+    assert &quot;tulips&quot; in g.plants
+    print(&quot;test_garden_initial_plants passed.&quot;)
+
+def test_garden_plant_addition():
+    g = Garden()
+    g.plants.append(&quot;pumpkin&quot;)
+    assert &quot;pumpkin&quot; in g.plants
+    print(&quot;test_garden_plant_addition passed.&quot;) 
+</div></code></pre>
+<h3 id="hurdles-and-growth">Hurdles and growth</h3>
+<p>In initial creating of this app I wasnt in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. I have learnt the importance of descriptive and meaningful commits, over the course of the projects I'm working on.</p>
+<h2 id="packages">PACKAGES</h2>
+<ul>
+<li>
+<p>Colorama to give the game some colour and different functions &amp; methods distinction from eachother. Documentation on Colorama:<br>
+<a href="https://pypi.org/project/colorama/">Colorama on pypi</a></p>
+</li>
+<li>
+<p>Questionary from the Python library, to use the arrow keys to navigate up and down actions and ultimately select which you would like. Documentation on Questionary:<br>
+<a href="https://pypi.org/project/questionary/">Questionary on pypi</a></p>
+</li>
+</ul>
+<p><strong>COLORAMA LICENSE</strong></p>
+<p>Copyright (c) 2010 Jonathan Hartley<br>
+All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:</p>
+<ul>
+<li>Redistributions of source code must retain the above copyright notice, this<br>
+list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notice,<br>
+this list of conditions and the following disclaimer in the documentation<br>
+and/or other materials provided with the distribution.</li>
+<li>Neither the name of the copyright holders, nor those of its contributors<br>
+may be used to endorse or promote products derived from this software without<br>
+specific prior written permission.</li>
+</ul>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR<br>
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER<br>
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,<br>
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p><strong>QUESTIONARY LICENSE</strong></p>
+<p>Copyright 2020 Tom Bocklisch and contributors</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of<br>
+this software and associated documentation files (the &quot;Software&quot;), to deal in<br>
+the Software without restriction, including without limitation the rights to<br>
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies<br>
+of the Software, and to permit persons to whom the Software is furnished to do<br>
+so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all<br>
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
+SOFTWARE.# garden-app-assessment</p>
+
+</body>
+
+</html>
