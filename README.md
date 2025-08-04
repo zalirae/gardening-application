@@ -2,13 +2,13 @@
 # GARDENING APP
 
 **Created by Zali Rae** 2025
-This is a terminal based application where you create and maintain a garden, with a selection of different plants! You can water, fertilize, plant seeds and ultimately even save your garden to a json file. 
+This is a terminal based application where you create and maintain a garden, with a selection of different plants! You can water, fertilize, plant seeds and ultimately even save your garden to a json file.
 
-This app is a text based, simple and interactive game, where the user has a certain level of control over the garden - promoting imagination of what that space would look like. It was really enjoyable to imagine and construct the different functions, figuring out how they all worked and became interactive. I used a virtual environment to install necessary packages and libraries: *Colorama* (to colourise and diversify text) and *Questionary* (for nice looking command line interfaces, in this case using the arrow keys navigate up and down and select which action you would like to take). 
+This app is a text based, simple and interactive game, where the user has a certain level of control over the garden - promoting imagination of what that space would look like. It was really enjoyable to imagine and construct the different functions, figuring out how they all worked and became interactive. I used a virtual environment to install necessary packages and libraries: *Colorama* (to colourise and diversify text) and *Questionary* (for nice looking command line interfaces, in this case using the arrow keys navigate up and down and select which action you would like to take).
 
 ## SET UP and HELP
 
-This app runs on Python3! As well as uses a couple of libraries you will have to install to help everything run smoothly and to get the most out of the game. 
+This app runs on Python3! As well as uses a couple of libraries you will have to install to help everything run smoothly and to get the most out of the game.
 Here is some documentation on installing Python3 if you haven't already got it:
 
 [Installing Python](https://realpython.com/installing-python/)
@@ -20,37 +20,45 @@ As well as some documentation on used libraries, Colorama & Questionary:
 
 And now, some instructions on setting up your Gardening App on your own device...
 
-
 ### Mac OS
 
-Download the zip file, take note of the location it saves to, by default this is the downloads file. 
-Open a new terminal and navigate to the downloads folder: 
+Download the zip file, take note of the location it saves to, by default this is the downloads file.
+Open a new terminal and navigate to the downloads folder:
+
 ```
 -> cd downloads
 ```
-Once in the downloads folder, navigate to the garden app folder: 
+
+Once in the downloads folder, navigate to the garden app folder:
+
 ```
 -> cd 16307_Bartholomew_Zali_DEV1001_Assessment_02
 ```
 
-You will need python installed to run this app, check you have it: 
+You will need python installed to run this app, check you have it:
+
 ```
 -> python --version 
 ```
-If it is not installed, you will need to install it to continue. 
 
-Next you will install the necessary libraries: 
+If it is not installed, you will need to install it to continue.
+
+Next you will install the necessary libraries:
+
 ```
 pip3 install colorama
 pip3 install questionary
 ```
 
-Once those have successfully installed, you can run the app: 
+Once those have successfully installed, you can run the app:
 *for python versions below 3.13 run:*
+
 ```
 -> python gardening_app.py
 ```
+
 *for python versions 3.13 and above run:*
+
 ```
 -> python3 gardening_app.py
 ```
@@ -58,40 +66,47 @@ Once those have successfully installed, you can run the app:
 Continue to follow prompts with yes/no or make selections using the arrow keys to play and complete your game!
 
 *To exit game:*
-Navigate using arrow keys to 'exit' and select with return! 
-
-
+Navigate using arrow keys to 'exit' and select with return!
 
 ### Windows PC
 
-Download the zip file, take note of the location it saves to, by default this is the downloads file. 
-Open a new terminal and navigate to the downloads folder: 
+Download the zip file, take note of the location it saves to, by default this is the downloads file.
+Open a new terminal and navigate to the downloads folder:
+
 ```
 -> cd downloads
 ```
-Once in the downloads folder, navigate to the garden app folder: 
+
+Once in the downloads folder, navigate to the garden app folder:
+
 ```
 -> cd 16307_Bartholomew_Zali_DEV1001_Assessment_02
 ```
 
-You will need python installed to run this app, check you have it: 
+You will need python installed to run this app, check you have it:
+
 ```
 -> python --version 
 ```
-If it is not installed, you will need to install it to continue. 
 
-Next you will install the necessary libraries: 
+If it is not installed, you will need to install it to continue.
+
+Next you will install the necessary libraries:
+
 ```
 pip3 install colorama
 pip3 install questionary
 ```
 
-Once those have successfully installed, you can run the app: 
-for python versions below 3.13 run: 
+Once those have successfully installed, you can run the app:
+for python versions below 3.13 run:
+
 ```
 -> python gardening_app.py
 ```
-for python versions 3.13 and above run: 
+
+for python versions 3.13 and above run:
+
 ```
 -> python3 gardening_app.py
 ```
@@ -102,6 +117,7 @@ Continue to follow prompts with yes/no or make selections using the arrow keys t
 Navigate using arrow keys to 'exit' and select with return.
 
 ## TESTING
+
 Upon further learning and continued tweaking and updating of the app, I have added and run multiple tests. Such as:
 
 ```
@@ -126,10 +142,14 @@ def test_garden_plant_addition():
 ```
 
 ### Hurdles and growth
-In initial creating of this app I wasnt in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. I have learnt the importance of descriptive and meaningful commits, over the course of the projects I'm working on. 
 
+In initial creating of this app I wasn't in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. I have learnt the importance of descriptive and meaningful commits, over the course of the projects I'm working on. Testing is something I am learning and want to continue to grow in my knowledge and understanding of.
 
-## PACKAGES 
+## FUTURE IDEAS
+
+Something I would like to create after having built this, is an app with more depth and even more interactivity. I loved working on this gardening theme, and would be interested in utilising my expanding knowledge from my course at Coder Academy. Using languages such as SQL and utilising databases to create a real experience for the user to participate in. 
+
+## PACKAGES
 
 - Colorama to give the game some colour and different functions & methods distinction from eachother. Documentation on Colorama:
 [Colorama on pypi](https://pypi.org/project/colorama/)
@@ -164,7 +184,6 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 
 **QUESTIONARY LICENSE**
 
