@@ -6,10 +6,11 @@ This is a terminal based application where you create and maintain a garden, wit
 
 This app is a text based, simple and interactive game, where the user has a certain level of control over the garden - promoting imagination of what that space would look like. It was really enjoyable to imagine and construct the different functions, figuring out how they all worked and became interactive. I used a virtual environment to install necessary packages and libraries: *Colorama* (to colourise and diversify text) and *Questionary* (for nice looking command line interfaces, in this case using the arrow keys navigate up and down and select which action you would like to take).
 
+My intention with creating this style of game or app is to invoke a peace within the user, a garden space that is meditative to navigate and satisfying to participate in. 
+
 ## SET UP and HELP
 
-This app runs on Python3! As well as uses a couple of libraries you will have to install to help everything run smoothly and to get the most out of the game.
-Here is some documentation on installing Python3 if you haven't already got it:
+This app runs on Python3! As well as uses a couple of libraries you will have to install to help everything run smoothly and to get the most out of the game. Here is some documentation on installing Python3 if you haven't already got it:
 
 [Installing Python](https://realpython.com/installing-python/)
 
