@@ -1,162 +1,215 @@
+# Gardening App
 
-# GARDENING APP
+Create and tend a cozy terminal garden — water, fertilise, plant seeds, and save or load your plants.
 
-**Created by Zali Rae** 2025
-This is a terminal based application where you create and maintain a garden, with a selection of different plants! You can water, fertilize, plant seeds and ultimately even save your garden to a json file.
+This app is a simple, text-based and interactive game that gives the user a sense of control over their garden — encouraging imagination about what that space might look like. It was really enjoyable to design and build the different functions, figuring out how they work together to create an interactive experience.
 
-This app is a text based, simple and interactive game, where the user has a certain level of control over the garden - promoting imagination of what that space would look like. It was really enjoyable to imagine and construct the different functions, figuring out how they all worked and became interactive. I used a virtual environment to install necessary packages and libraries: *Colorama* (to colourise and diversify text) and *Questionary* (for nice looking command line interfaces, in this case using the arrow keys navigate up and down and select which action you would like to take).
+A virtual environment was used to install the necessary packages and libraries: **Colorama** (to colourise and diversify text) and **Questionary** (to create user-friendly command-line menus navigated with arrow keys).
 
-My intention with creating this style of game or app is to invoke a peace within the user, a garden space that is meditative to navigate and satisfying to participate in. 
+My intention in creating this style of game or app is to evoke a sense of peace within the user — a garden space that is meditative to navigate and satisfying to participate in.
 
-## SET UP and HELP
+---
 
-This app runs on Python3! As well as uses a couple of libraries you will have to install to help everything run smoothly and to get the most out of the game. Here is some documentation on installing Python3 if you haven't already got it:
+## Quickstart
 
-[Installing Python](https://realpython.com/installing-python/)
+### 1) (Optional) Create and activate a virtual environment
 
-As well as some documentation on used libraries, Colorama & Questionary:
+```bash
+# macOS / Linux
+python3 -m venv .venv || python -m venv .venv
+source .venv/bin/activate
 
-[COLORAMA install & documentation](https://pypi.org/project/colorama/)
-[QUESTIONARY install & documentation](https://pypi.org/project/questionary/)
+# Windows PowerShell
+py -m venv .venv   # or: python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 
-And now, some instructions on setting up your Gardening App on your own device...
-
-### Mac OS
-
-Download the zip file, take note of the location it saves to, by default this is the downloads file.
-Open a new terminal and navigate to the downloads folder:
-
-```
--> cd downloads
+# Windows CMD
+py -m venv .venv   # or: python -m venv .venv
+.\.venv\Scripts\activate.bat
 ```
 
-Once in the downloads folder, navigate to the garden app folder:
+### 2) Install dependencies
 
-```
--> cd 16307_Bartholomew_Zali_DEV1001_Assessment_02
-```
-
-You will need python installed to run this app, check you have it:
-
-```
--> python --version 
+```bash
+# If 'pip' fails, try 'pip3' (macOS/Linux) or 'py -m pip' (Windows)
+pip install colorama==0.4.6 questionary==2.0.1 pytest==8.3.3
 ```
 
-If it is not installed, you will need to install it to continue.
+### 3) Run
 
-Next you will install the necessary libraries:
-
-```
-pip3 install colorama
-pip3 install questionary
+```bash
+# Use the Python you activated above
+python -m gardening_app   # or: python3 -m gardening_app | py -m gardening_app (Windows)
 ```
 
-Once those have successfully installed, you can run the app:
-*for python versions below 3.13 run:*
+---
 
-```
--> python gardening_app.py
-```
+## Features
 
-*for python versions 3.13 and above run:*
+- 🌻 Show Garden — view all plants currently growing
+- 💧 Water Garden — hydrate your plants
+- 🌿 Fertilise Soil — nourish your garden
+- 🌰 Plant Seeds — add “orange tree” or “pumpkin”
+- 💾 Save Garden — save your garden to a JSON file
 
-```
--> python3 gardening_app.py
-```
+<p>
+  <img src="assets/garden_app_preview.gif" alt="Gardening App demo preview" width="600">
+</p>
 
-Continue to follow prompts with yes/no or make selections using the arrow keys to play and complete your game!
+### Future Improvements
 
-*To exit game:*
-Navigate using arrow keys to 'exit' and select with return!
+- Add a **Pick/Harvest** feature to align with the “ready to be picked” message, allowing users to collect or remove plants from their garden.
+- Track harvested items, add growth stages, and display simple ASCII visuals.
 
-### Windows PC
+---
 
-Download the zip file, take note of the location it saves to, by default this is the downloads file.
-Open a new terminal and navigate to the downloads folder:
+## Data & Save File
 
-```
--> cd downloads
-```
+Garden data is stored locally in a file called `garden_data.json`.
 
-Once in the downloads folder, navigate to the garden app folder:
+Example `garden_data.json` file:
 
-```
--> cd 16307_Bartholomew_Zali_DEV1001_Assessment_02
-```
-
-You will need python installed to run this app, check you have it:
-
-```
--> python --version 
+```json
+{
+  "plants": ["tomatoes", "snow peas", "marigolds", "nasturtiums", "tulips", "orange tree"]
+}
 ```
 
-If it is not installed, you will need to install it to continue.
+- The file is created automatically when you save for the first time.
+- Your garden starts with a default selection of plants, which are written to the file on save.
+- Any new plants added during play are stored and reloaded when you next open the app.
 
-Next you will install the necessary libraries:
+---
 
+## Platform Notes
+
+- If `python` points to Python 2 on your system, use `python3`.
+- If you don’t use a virtual environment (venv), you can still install dependencies globally with `pip` (or `pip3`).
+- The app runs the same way on Windows, macOS, and Linux once dependencies are installed.
+
+---
+
+## Packages and Dependencies
+
+| Package                    | Purpose                                               | Reason for Use                                                                  |
+| -------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **colorama**               | Adds colour formatting to text output in the terminal | Improves readability and user experience                                        |
+| **questionary**            | Provides interactive menus and prompts                | Simplifies command-line input and keeps UX friendly                             |
+| **json** (Python built-in) | Reads and writes data to `garden_data.json`           | Enables persistent garden data storage                                          |
+| **pytest**                 | Framework for running unit tests                      | Used to verify functions like `is_valid_seed` and ensure the app runs correctly |
+
+---
+
+## How It Works
+
+The app uses two main classes:
+
+- `Garden` — represents your garden and stores a list of plants.
+- `GardenActions` — contains all actions you can perform (watering, fertilising, planting, etc.).
+
+Imported Libraries
+
+- `colorama` — adds colour to terminal text (for better readability).
+- `questionary` — provides interactive command-line menus for user input.
+- `json` — handles saving/loading your garden data.
+
+Together, these components allow the user to interactively manage a persistent virtual garden through simple command-line prompts.
+
+---
+
+## Project Structure
+
+The following outlines the key files included in the Gardening App project.
+
+```text
+.
+├── README.md                        # Project documentation
+├── README.pdf
+├── assets                           # Static assets (e.g., screenshots or GIF preview)
+│   └── garden_app_preview.gif
+├── garden_data.json                 # JSON file storing the saved garden data
+├── gardening_app.py                 # Main program with garden logic and interactions
+└── test_garden_app.py               # Unit tests for core features
 ```
-pip3 install colorama
-pip3 install questionary
+
+---
+
+## Testing
+
+Tests live in `test_garden_app.py`. Activate your virtual environment first (see Quickstart).
+
+### 1) Install pytest (if not already installed)
+
+```bash
+pip install pytest
 ```
 
-Once those have successfully installed, you can run the app:
-for python versions below 3.13 run:
+### 2) Run the whole test suite
 
-```
--> python gardening_app.py
-```
-
-for python versions 3.13 and above run:
-
-```
--> python3 gardening_app.py
+```bash
+pytest -q
 ```
 
-Continue to follow prompts with yes/no or make selections using the arrow keys to play and complete your game!
+The test suite covers:
 
-*To exit game:*
-Navigate using arrow keys to 'exit' and select with return.
+- Valid and invalid seed types
 
-## TESTING
-
-Upon further learning and continued tweaking and updating of the app, I have added and run multiple tests. Such as:
-
-```
+```python
 def test_is_valid_seed():
     assert is_valid_seed("orange tree")
     assert is_valid_seed("pumpkin")
     assert not is_valid_seed("apple")
     assert not is_valid_seed("")
     print("test_is_valid_seed passed.")
+```
 
+- Default garden plant list
+
+```python
 def test_garden_initial_plants():
     g = Garden()
     assert "tomatoes" in g.plants
     assert "tulips" in g.plants
     print("test_garden_initial_plants passed.")
+```
 
+- Adding new plants to the garden
+
+```python
 def test_garden_plant_addition():
     g = Garden()
     g.plants.append("pumpkin")
     assert "pumpkin" in g.plants
-    print("test_garden_plant_addition passed.") 
+    print("test_garden_plant_addition passed.")
 ```
 
-### Hurdles and growth
+Useful testing commands:
 
-In initial creating of this app I wasn't in the practice of making continual commits and being really on top of utilising version control, this is something I want to get better app and also continue to only understand better. I have learnt the importance of descriptive and meaningful commits, over the course of the projects I'm working on. Testing is something I am learning and want to continue to grow in my knowledge and understanding of.
+```bash
+# Run with more detail (verbose)
+pytest -v
 
-## FUTURE IDEAS
+# Run a single test function by name
+pytest -q -k test_is_valid_seed
 
-Something I would like to create after having built this, is an app with more depth and even more interactivity. I loved working on this gardening theme, and would be interested in utilising my expanding knowledge from my course at Coder Academy. Using languages such as SQL and utilising databases to create a real experience for the user to participate in. 
+# Stop on first failure
+pytest -x
 
-## PACKAGES
+# Show print output (if any) during tests
+pytest -s
+```
 
-- Colorama to give the game some colour and different functions & methods distinction from eachother. Documentation on Colorama:
-[Colorama on pypi](https://pypi.org/project/colorama/)
+---
 
-- Questionary from the Python library, to use the arrow keys to navigate up and down actions and ultimately select which you would like. Documentation on Questionary:
-[Questionary on pypi](https://pypi.org/project/questionary/)
+## Ethical & Accessibility Considerations
+
+- The app stores data locally only — no internet access or external data sharing.
+- Colour output improves usability but may affect accessibility for colour-blind users; future versions could include a “no-colour” mode.
+- Uses open-source libraries under approved licenses (see below).
+
+---
+
+## Licences
 
 **COLORAMA LICENSE**
 
@@ -206,4 +259,40 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.# garden-app-assessment
+SOFTWARE.
+
+---
+
+## Feedback Summary
+
+| Date | Reviewer | Feedback Summary | Action Taken / Reflection |
+| ---- | -------- | ---------------- | ------------------------- |
+
+TBA
+
+---
+
+## Contributors
+
+| Role                          | Name               | Responsibilities                                    |
+| ----------------------------- | ------------------ | --------------------------------------------------- |
+| **Developer / Project Owner** | Zali Rae           | Original codebase, logic, testing, and feedback log |
+| **Documentation Lead**        | Courtney Macgregor | README, code comments, documentation review         |
+| **Presentation Lead**         | Simona Chiapperino | Slides and presentation recording                   |
+
+---
+
+## References
+
+This app runs on Python 3 and uses two key libraries — Colorama and Questionary — to enhance the command-line experience.  
+Below are helpful resources for installation and further documentation:
+
+[Installing Python](https://realpython.com/installing-python/)
+
+As well as some documentation on used libraries, Colorama & Questionary:
+
+[COLORAMA install & documentation](https://pypi.org/project/colorama/)
+
+[QUESTIONARY install & documentation](https://pypi.org/project/questionary/)
+
+---
