@@ -44,13 +44,22 @@ python -m gardening_app   # or: python3 -m gardening_app | py -m gardening_app (
 
 ---
 
+## System Requirements
+
+- Python 3.9 or later (recommended)
+- Internet connection (for initial package installation only)
+- Terminal or command-line access (Windows PowerShell, macOS Terminal, or Linux Shell)
+- Works on Windows, macOS, and Linux
+
+---
+
 ## Features
 
-- 🌻 Show Garden — view all plants currently growing
-- 💧 Water Garden — hydrate your plants
-- 🌿 Fertilise Soil — nourish your garden
-- 🌰 Plant Seeds — add “orange tree” or “pumpkin”
-- 💾 Save Garden — save your garden to a JSON file
+- 🌻 **Show Garden** — Displays all plants currently growing in your garden.
+- 💧 **Water Garden** — Keeps plants healthy; shows feedback messages using colour.
+- 🌿 **Fertilise Soil** — Boosts growth and shows a readiness message.
+- 🌰 **Plant Seeds** — Lets you add “orange tree” or “pumpkin” to your garden.
+- 💾 **Save Garden** — Saves your garden’s state to a local JSON file.
 
 <p>
   <img src="assets/garden_app_preview.gif" alt="Gardening App demo preview" width="600">
@@ -106,6 +115,7 @@ The app uses two main classes:
 
 - `Garden` — represents your garden and stores a list of plants.
 - `GardenActions` — contains all actions you can perform (watering, fertilising, planting, etc.).
+- `main()` — handles the user input loop, connects menu actions, and manages program flow.
 
 Imported Libraries
 
@@ -124,7 +134,11 @@ The following outlines the key files included in the Gardening App project.
 ```text
 .
 ├── README.md                        # Project documentation
-├── README.pdf
+├── Feedback                         # Peer feedback and internal review logs
+│   ├── 1.Overview.md
+│   ├── 1.Overview.pdf
+│   ├── 2.Internal-review.md
+│   └── 2.Internal-review.pdf
 ├── assets                           # Static assets (e.g., screenshots or GIF preview)
 │   └── garden_app_preview.gif
 ├── garden_data.json                 # JSON file storing the saved garden data
@@ -296,3 +310,5 @@ As well as some documentation on used libraries, Colorama & Questionary:
 [QUESTIONARY install & documentation](https://pypi.org/project/questionary/)
 
 ---
+
+This documentation and accompanying files were developed collaboratively as part of the ISK1001 Industry Skills I Assesment 3 project, demonstrating professional communication and documentation practices.
