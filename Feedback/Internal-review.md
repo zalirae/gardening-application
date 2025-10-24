@@ -1,4 +1,4 @@
-## INTERNAL REVIEW
+# INTERNAL REVIEW
 
 Before recieving feedback from others we conducted an internal review of the Gardening Application to go over any improvements necessary.
 
