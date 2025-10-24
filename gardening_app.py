@@ -21,8 +21,6 @@ GARDEN_FILE = "garden_data.json"
 
 def get_yes_no(prompt):
     """Prompt repeatedly for a yes/no answer and return 'yes' or 'no' (lowercase).
-
-    Uses standard input so it works anywhere (no special TTY handling required).
     """
     while True:
         response = input(prompt + " (yes/no): ").strip().lower()
@@ -144,7 +142,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Testing helpers kept for compatibility with existing tests.
+# Helpers primarily for tests
 def calculate_growth(days):
     return days * 2
 
