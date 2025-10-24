@@ -78,3 +78,34 @@ def calculate_growth(days):
 Suggestions on improvement:
 
 - calculate_growth is not referenced by app or current tests so it should be removed for clarity.
+
+## Review 04 - Simona 
+
+### Original Code 
+
+```python
+def fertilize(self):
+        if get_yes_no("Fertilize the soil?") == "yes":
+            print(Fore.MAGENTA + "Your plants are ready to be picked!")
+        else:
+            print(Fore.YELLOW + "Your plants need fertilizer soon!")
+```
+
+Suggestions on improvement:
+
+- The function could include a short "action line" before the feedback message and an outcome message.
+- Adding a line break (\n) makes the output easier to read in the terminal when actions are performed repeatedly.
+
+```python
+def fertilize(self):
+    if get_yes_no("Fertilize the soil?") == "yes":
+        print(Fore.MAGENTA + "\nFertilising the soil...")
+        print(Fore.GREEN + "Your plants are growing stronger!")
+    else:
+        print(Fore.YELLOW + "Don’t forget to fertilise soon!")
+```
+
+
+
+
+
