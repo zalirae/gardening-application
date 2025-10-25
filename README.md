@@ -74,7 +74,7 @@ python -m gardening_app   # or: python3 -m gardening_app | py -m gardening_app (
 
 ## Data & Save File
 
-Garden data is stored locally in a file called `garden_data.json`.
+Garden data is stored locally in a file called `garden_data.json`, located in the project’s root directory.
 
 Example `garden_data.json` file:
 
@@ -84,9 +84,9 @@ Example `garden_data.json` file:
 }
 ```
 
-- The file is created automatically when you save for the first time.
+- The file is created automatically the first time you save your garden.
 - Your garden starts with a default selection of plants, which are written to the file on save.
-- Any new plants added during play are stored and reloaded when you next open the app.
+- Any new plants added during play are saved and automatically reloaded the next time you open the app.
 
 ---
 
