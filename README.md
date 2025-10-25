@@ -111,7 +111,7 @@ Example `garden_data.json` file:
 
 ## How It Works
 
-The app uses two main classes:
+The app uses two main classes and one entry-point function:
 
 - `Garden` — represents your garden and stores a list of plants.
 - `GardenActions` — contains all actions you can perform (watering, fertilising, planting, etc.).
