@@ -134,16 +134,15 @@ The following outlines the key files included in the Gardening App project.
 ```text
 .
 ├── README.md                        # Project documentation
-├── Feedback                         # Peer feedback and internal review logs
-│   ├── 1.Overview.md
-│   ├── 1.Overview.pdf
-│   ├── 2.Internal-review.md
-│   └── 2.Internal-review.pdf
-├── assets                           # Static assets (e.g., screenshots or GIF preview)
-│   └── garden_app_preview.gif
-├── garden_data.json                 # JSON file storing the saved garden data
-├── gardening_app.py                 # Main program with garden logic and interactions
-└── test_garden_app.py               # Unit tests for core features
+├── Feedback/                        # Peer/external and internal review notes
+│   ├── 1. Overview.md
+│   ├── External-feedback-log.md
+│   └── Internal-review.md
+├── assets/
+│   └── garden_app_preview.gif       # GIF preview of the app
+├── gardening_app.py                 # Main program (logic + interactions)
+├── test_garden_app.py               # Unit tests for core features
+└──  garden_data.json                # Saved garden data (runtime file)
 ```
 
 ---
@@ -277,22 +276,45 @@ SOFTWARE.
 
 ---
 
-## Feedback Summary
+## Troubleshooting
 
-| Date | Reviewer | Feedback Summary | Action Taken / Reflection |
-| ---- | -------- | ---------------- | ------------------------- |
+- **No colour in output:** Your terminal may not support ANSI colour codes.  
+  Try running the app in Command Prompt, PowerShell, or Terminal.
+- **Import errors:** Ensure dependencies are installed with  
+  `pip install colorama questionary`.
+- **Python not found:** Use `python3` or `py` depending on your OS.
 
-TBA
+---
+
+## Feedback and Reflection
+
+Our team received constructive peer and internal feedback focused on improving readability, structure, and maintainability. The following table summarises key feedback points and realistic, high-impact improvements that would enhance the project’s usability and documentation quality.
+
+### Feedback Summary
+
+| Date        | Reviewer                                 | Feedback Summary                                                                                         | Actionable improvements                                                                                                                                                   |
+| ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 24 Oct 2025 | Amelia                                   | Suggested reorganising the README for better flow and clarity.                                           | Reorganise sections for smoother readability (e.g., grouping Features and How It Works). Simplify the licence section by linking externally instead of copying full text. |
+| 24 Oct 2025 | Brando                                   | Recommended expanding code comments for clarity and function explanations.                               | Add concise, descriptive docstrings for each class and function; improve inline comments to explain logic and relationships between methods.                              |
+| 24 Oct 2025 | Lorena                                   | Advised including an “Ethical & Accessibility Considerations” section.                                   | Keep existing section and expand slightly to mention accessibility improvements such as providing a “no-colour” mode option for users with visual impairments.            |
+| 24 Oct 2025 | Tamara                                   | Suggested adding a “Troubleshooting” section for setup issues.                                           | Troubleshooting section added to assist users with common installation and runtime problems.                                                                              |
+| 24 Oct 2025 | Internal Review (Zali, Simona, Courtney) | Recommended refining fertiliser message, removing unused helper functions, and improving input handling. | Refine fertiliser text for accuracy, remove the unused `calculate_growth()` helper, and enhance input handling by accepting both “y/n” and “yes/no”.                      |
+
+_For complete peer and internal review notes, see the [`Feedback/`](./Feedback) folder containing external and internal review logs._
+
+### Reflection
+
+This feedback process helped highlight the importance of clear, user-centred documentation and maintainable code. Implementing suggestions such as improving structure, refining comments, and adding troubleshooting support directly improved project readability and user experience. The team also identified further opportunities to strengthen accessibility and input validation, which will be prioritised in future updates.
 
 ---
 
 ## Contributors
 
-| Role                          | Name               | Responsibilities                                    |
-| ----------------------------- | ------------------ | --------------------------------------------------- |
-| **Developer / Project Owner** | Zali Rae           | Original codebase, logic, testing, and feedback log |
-| **Documentation Lead**        | Courtney Macgregor | README, code comments, documentation review         |
-| **Presentation Lead**         | Simona Chiapperino | Slides and presentation recording                   |
+| Role                          | Name                                           | Responsibilities                                    |
+| ----------------------------- | ---------------------------------------------- | --------------------------------------------------- |
+| **Developer / Project Owner** | Zali ([zalirae](https://github.com/zalirae))   | Original codebase, logic, testing, and feedback log |
+| **Documentation Lead**        | Courtney ([c-joss](https://github.com/c-joss)) | README, code comments, documentation review         |
+| **Presentation Lead**         | Simona ([ChiSimo](https://github.com/ChiSimo)) | Slides and presentation recording                   |
 
 ---
 
