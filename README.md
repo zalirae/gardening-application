@@ -8,6 +8,11 @@ A virtual environment was used to install the necessary packages and libraries: 
 
 My intention in creating this style of game or app is to evoke a sense of peace within the user — a garden space that is meditative to navigate and satisfying to participate in.
 
+### Repository
+
+The source code and documentation for this project are available at:  
+[https://github.com/zalirae/gardening-application](https://github.com/zalirae/gardening-application)
+
 ---
 
 ## Quickstart
