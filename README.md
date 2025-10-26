@@ -8,6 +8,10 @@ A virtual environment was used to install the necessary packages and libraries: 
 
 My intention in creating this style of game or app is to evoke a sense of peace within the user — a garden space that is meditative to navigate and satisfying to participate in.
 
+### Presentation
+A short presentation showcasing and discussing this application and important information on it's development, structure and purpose linked below: 
+[Presentation on the Gardening Application by Simona Chiapperino](https://www.loom.com/share/f52f86a08cb749c5956e2814eb26dd5d)
+
 ### Repository
 
 The source code and documentation for this project are available at:  
